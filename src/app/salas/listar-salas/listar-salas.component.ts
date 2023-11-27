@@ -7,8 +7,8 @@ import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listar-sala',
-  templateUrl: './listar-sala.component.html',
-  styleUrls: ['./listar-sala.component.css']
+  templateUrl: './listar-salas.component.html',
+  styleUrls: ['./listar-salas.component.css']
 })
 
 export class ListarSalasComponent implements OnInit{
