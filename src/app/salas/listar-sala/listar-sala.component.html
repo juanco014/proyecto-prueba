@@ -1,1 +1,34 @@
-<p>listar-sala works!</p>
+<div class="container-fluid max-width-900">
+  <!--detalle de la sala -->
+  <div *ngIf="selected" class="row row-cols-1" >
+    <div>
+      <app-detalle-sala [sala]="salaSelected"> </app-detalle-sala>
+    </div>
+  </div>
+  <!-- listado de salas -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col"> codigo </th>
+      <th scope="col"> sala </th>
+      <th scope="col"> programa </th>
+      <th scope="col"> eliminar </th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let sala of salas">
+      <tr >
+        <td (click)='onselected(sala)' class="clickable"> {{sala.id}}</td>
+        <td (click)='onselected(sala)' class="clickable"> {{sala.sala}} </td>
+        <td (click)='onselected(sala)' class="clickable"> {{sala.programa}} </td>
+        <td (click)="borrarSala(sala)" class="clickable"><img src="../../../assets/1214428.png" alt="borrar curso"/></td>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+  <div class="row justify-content-center mt-3">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary btn-block" (click)="crearSala()" >Crear Sala</button>
+    </div>
+  </div>
+</div>
