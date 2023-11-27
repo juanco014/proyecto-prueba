@@ -1,16 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ListarSalaComponent } from './listar-sala.component';
+import { ListarSalasComponent } from './listar-sala.component';
 
 describe('ListarSalaComponent', () => {
-  let component: ListarSalaComponent;
-  let fixture: ComponentFixture<ListarSalaComponent>;
+  let component: ListarSalasComponent;
+  let fixture: ComponentFixture<ListarSalasComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListarSalaComponent]
+      declarations: [ListarSalasComponent]
     });
-    fixture = TestBed.createComponent(ListarSalaComponent);
+    fixture = TestBed.createComponent(ListarSalasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
