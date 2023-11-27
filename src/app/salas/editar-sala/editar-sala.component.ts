@@ -3,7 +3,8 @@ import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} fr
 import {ActivatedRoute, Router} from "@angular/router";
 import {SalaService} from "../service/sala.service";
 import {Sala} from "../model/sala";
-//import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-editar-sala',
@@ -46,7 +47,7 @@ export class EditarSalaComponent implements OnInit {
    */
 
   editarSala(sala: Sala){
-    /**this.salaService.editarSala(sala).subscribe(
+    this.salaService.editarSala(sala).subscribe(
      (sala:Sala) => {
      Swal.fire(
      'Curso creado',
@@ -54,7 +55,6 @@ export class EditarSalaComponent implements OnInit {
      'success'
      );
      });
-     **/
   }
 
   ngOnInit(): void {

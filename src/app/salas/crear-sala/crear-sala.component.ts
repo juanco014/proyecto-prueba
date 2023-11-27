@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {SalaService} from "../service/sala.service";
 import {Sala} from "../model/sala";
+import Swal from "sweetalert2";
 
 
 @Component({
@@ -40,7 +41,7 @@ export class CrearSalaComponent implements OnInit {
    */
 
   crearSala(sala: Sala){
-    /** this.salaService.crearSala(sala).subscribe(
+     this.salaService.crearSala(sala).subscribe(
      (sala:Sala) => {
      Swal.fire(
      'Curso creado',
@@ -50,7 +51,7 @@ export class CrearSalaComponent implements OnInit {
      this.crearSalaForm.reset();  //Resetea el formulario
      this.router.navigate(['/listar']);
      });
-     **/
+
   }
 
 
