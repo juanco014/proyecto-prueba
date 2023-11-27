@@ -38,7 +38,7 @@ export class EditarSalaComponent implements OnInit {
    * metodo que crea una sala
    */
   cancelarEditarSala(){
-    this.router.navigate(["/Listar"]);
+    this.router.navigate(["/listar"]);
   }
 
   /**
@@ -54,6 +54,7 @@ export class EditarSalaComponent implements OnInit {
      `La sala ${sala.sala} ha sido editado con exito`,
      'success'
      );
+       this.router.navigate(['/listar']); //Redirecciona a la ruta /listar
      });
   }
 

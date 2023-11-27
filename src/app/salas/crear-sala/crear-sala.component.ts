@@ -32,7 +32,7 @@ export class CrearSalaComponent implements OnInit {
    * metodo que crea una sala
    */
   cancelarCrearSala(){
-    this.router.navigate(["/Listar"]);
+    this.router.navigate(["/listar"]);
   }
 
   /**
@@ -51,7 +51,6 @@ export class CrearSalaComponent implements OnInit {
      this.crearSalaForm.reset();  //Resetea el formulario
      this.router.navigate(['/listar']);
      });
-
   }
 
 

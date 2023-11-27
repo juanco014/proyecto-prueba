@@ -26,15 +26,14 @@ export class ListarSalasComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.salas[0] ={id:1,sala:'angular',programa:'programacion'};
+
   }
 
 
   onselected(sala: Sala) {
     this.salaSelected = sala;
     this.selected = true;
-
-    this.routerPath.navigate(['editar/',+ sala.id]); //cositas aparte
+    this.routerPath.navigate(['editar/', + this.salaSelected.id]); //cositas aparte
   }
 
   borrarSala(sala: Sala) {
