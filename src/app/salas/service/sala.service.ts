@@ -8,15 +8,15 @@ import {map, Observable} from "rxjs";
 })
 export class SalaService {
 
-  private baseUrl: String = "http://localhost:8080";
+  private baseUrl: String = "http://localhost:8080/";
 
   constructor(private httpClient: HttpClient) {
 
   }
 
   /**
-   * Metodo que obtiene los cursos
-   * @returns Observable<Curso[]> Lista de cursos
+   * Metodo que obtiene los salas
+   * @returns Observable<Sala[]> Lista de salas
    */
   getSalas(): Observable<Sala[]> {
     return this.httpClient.get<Sala[]>(this.baseUrl + "/salaes")
@@ -39,7 +39,7 @@ export class SalaService {
    * @param sala
    */
   crearSala(sala: Sala): Observable<Sala> {
-    return this.httpClient.post<Sala>(this.baseUrl + "/salaes", Sala);
+    return this.httpClient.post<Sala>(this.baseUrl + "/salaes", sala);
   }
 
   /**

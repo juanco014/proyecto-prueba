@@ -29,7 +29,10 @@ export class ListarSalasComponent implements OnInit{
 
   }
 
-
+    /**
+    * Evento que se dispara al seleccionar un curso en la lista
+* @param sala Sala seleccionado
+*/
   onselected(sala: Sala) {
     this.salaSelected = sala;
     this.selected = true;

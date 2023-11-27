@@ -16,7 +16,7 @@ export class EditarSalaComponent implements OnInit {
 // Creamos e inicializamos el formulario editarCursoForm usando el constructor de FormGroup
   public editarSalaForm: FormGroup = new FormGroup( {
     id: new FormControl('',[Validators.required,Validators.minLength(4)]),
-    curso: new FormControl('',[Validators.required,Validators.minLength(4)]),
+    sala: new FormControl('',[Validators.required,Validators.minLength(4)]),
     programa: new FormControl('',[Validators.required,Validators.minLength(4)])
   })
   public sala!: Sala;
@@ -66,7 +66,7 @@ export class EditarSalaComponent implements OnInit {
 
       this.editarSalaForm = this.formBuilder.group({
         id: [this.sala.id,[]],
-        curso: [this.sala.sala, [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
+        sala: [this.sala.sala, [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
         programa: [this.sala.programa, [Validators.required, Validators.minLength(4)]]
       });
     });
